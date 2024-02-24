@@ -11,5 +11,11 @@ def index(prof):
     return render_template('base.html',  prof=prof, img1=img1, img2=img2, css=css)
 
 
+@app.route('/list_prof/<type_of_list>')
+def print_list(type_of_list):
+    css = url_for('static', filename='css/style.css')
+    return render_template('list.html', css=css, type_of_list=type_of_list)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
