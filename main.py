@@ -8,7 +8,7 @@ def index(prof):
     img1 = url_for('static', filename='img/spaceship_1.jpg')
     img2 = url_for('static', filename='img/spaceship_2.png')
     css = url_for('static', filename='css/style.css')
-    return render_template('base.html',  prof=prof, img1=img1, img2=img2, css=css)
+    return render_template('training.html',  prof=prof, img1=img1, img2=img2, css=css)
 
 
 @app.route('/list_prof/<type_of_list>')
